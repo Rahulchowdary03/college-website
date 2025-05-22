@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Website - Register for Course</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <main>
+        <section class="register">
+            <h1>Register for a Course</h1>
+            <div id="register-form-container">
+                <input type="text" id="reg-name" placeholder="Full Name" required>
+                <input type="email" id="reg-email" placeholder="Email" required>
+                <select id="course" required>
+                    <option value="" disabled selected>Select a Course</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Business Administration">Business Administration</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Arts and Humanities">Arts and Humanities</option>
+                </select>
+                <button onclick="submitRegistration()">Register</button>
+            </div>
+            <p id="register-form-message"></p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Springfield College. All rights reserved.</p>
+    </footer>
+    <script src="js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #004080;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.admission {
+    padding: 40px;
+    text-align: center;
+}
+
+.process-flow {
+    margin-top: 40px;
+}
+
+.process-flow h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 20px;
+}
+
+.step {
+    flex: 1;
+    max-width: 180px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background-color: #004080;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.step h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.step p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Connecting lines and arrows */
+.step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 135%;
+    width: calc(100% + 20px); /* Account for gap between steps */
+    height: 2px;
+    background-color: #004080;
+    z-index: -1;
+    transform: translateX(-50%);
+}
+
+.step:not(:last-child)::before {
+    content: '▶';
+    position: absolute;
+    top: 10px;
+    left: 135%;
+    width: 20px; /* Match the gap between steps */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #004080;
+    font-size: 16px;
+    z-index: 0;
+}
+
+@media (max-width: 600px) {
+    .admission {
+        padding: 20px;
+    }
+
+    .steps-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .step {
+        max-width: 100%;
+        margin-bottom: 60px; /* Increased to accommodate arrow */
+    }
+
+    .step:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 40px;
+        top: 50px;
+        left: 50%;
+        background-color: #004080;
+        z-index: -1;
+        transform: translateX(-50%);
+    }
+
+    .step:not(:last-child)::before {
+        content: '▼';
+        position: absolute;
+        top: calc(100% + 10px); /* Position below the step */
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #004080;
+        font-size: 16px;
+        transform: translateX(-50%);
+    }
+
+    .step:last-child {
+        margin-bottom: 0;
+    }
+}
