@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Website - Register for Course</title>
+    <title>College Website - Register</title>
     <link rel="stylesheet" href="css/register.css">
 </head>
 <body>
     <div id="header-placeholder"></div>
     <main>
-        <section class="register">
-            <h1>Register for a Course</h1>
-            <div id="register-form-container">
-                <input type="text" id="reg-name" placeholder="Full Name" required>
-                <input type="email" id="reg-email" placeholder="Email" required>
-                <select id="course" required>
-                    <option value="" disabled selected>Select a Course</option>
+        <section id="register">
+            <h1>Register Now</h1>
+            <form id="register-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="course">Course:</label>
+                <select id="course" name="course" required>
+                    <option value="">Select a course</option>
                     <option value="Computer Science">Computer Science</option>
                     <option value="Business Administration">Business Administration</option>
                     <option value="Engineering">Engineering</option>
                     <option value="Arts and Humanities">Arts and Humanities</option>
                 </select>
-                <button onclick="submitRegistration()">Register</button>
-            </div>
-            <p id="register-form-message"></p>
+                <button type="submit">Register</button>
+            </form>
+            <div id="form-message"></div>
         </section>
     </main>
     <footer>

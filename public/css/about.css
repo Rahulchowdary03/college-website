@@ -4,13 +4,23 @@ body {
     padding: 0;
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #004080;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+#about {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+#about h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+#about p {
+    font-size: 18px;
+    margin: 0 auto 20px;
+    max-width: 800px;
+    line-height: 1.6;
 }
 
 footer {
@@ -22,13 +32,16 @@ footer {
     width: 100%;
 }
 
-.about {
-    padding: 40px;
-    text-align: center;
-}
-
 @media (max-width: 600px) {
-    .about {
-        padding: 20px;
+    #about {
+        padding: 30px 15px;
+    }
+
+    #about h1 {
+        font-size: 28px;
+    }
+
+    #about p {
+        font-size: 16px;
     }
 }

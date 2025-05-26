@@ -3,16 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Website - Home</title>
+    <title>College Website</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <div id="header-placeholder"></div>
     <main>
-        <section class="hero">
+        <section id="home">
             <h1>Welcome to Springfield College</h1>
-            <p>Empowering students with knowledge and skills for a bright future.</p>
-            <a href="courses.html" class="btn">Explore Courses</a>
+            <p>Your gateway to a bright future!</p>
+            <a href="register.html" class="btn">Register Now</a>
+        </section>
+        <section id="admin-section" style="display: none;">
+            <h2>Admin Dashboard</h2>
+            <div id="admin-access-message"></div>
+            <div id="registrations-section">
+                <h3>Registered Students (Read/Edit)</h3>
+                <table id="registrations-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Course</th>
+                            <th>Registered At</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="registrations-table-body"></tbody>
+                </table>
+            </div>
+            <div id="contact-section">
+                <h3>Contact Submissions (Read-Only)</h3>
+                <table id="contact-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Message</th>
+                            <th>Submitted At</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contact-table-body"></tbody>
+                </table>
+            </div>
         </section>
     </main>
     <footer>

@@ -4,13 +4,57 @@ body {
     padding: 0;
 }
 
-.btn {
-    display: inline-block;
+#register {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+#register h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button {
     padding: 10px 20px;
     background-color: #004080;
     color: white;
-    text-decoration: none;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#form-message {
+    margin-top: 20px;
+    font-size: 16px;
 }
 
 footer {
@@ -22,36 +66,20 @@ footer {
     width: 100%;
 }
 
-.register {
-    padding: 40px;
-    text-align: center;
-}
-
-#register-form-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-#register-form-container input, #register-form-container select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#register-form-container button {
-    padding: 10px;
-    background-color: #004080;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 @media (max-width: 600px) {
-    .register {
-        padding: 20px;
+    #register {
+        padding: 30px 15px;
+    }
+
+    #register h1 {
+        font-size: 28px;
+    }
+
+    form {
+        padding: 0 10px;
+    }
+
+    input, select, button {
+        font-size: 14px;
     }
 }

@@ -6,44 +6,53 @@ async function loadHeader() {
         }
         const headerContent = await response.text();
         document.getElementById('header-placeholder').innerHTML = headerContent;
+
+        // Set active tab
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === 'contact.html') {
+                link.classList.add('active');
+            }
+        });
     } catch (error) {
         console.error('Error loading header:', error);
         document.getElementById('header-placeholder').innerHTML = '<p>Error loading header</p>';
     }
 }
 
-document.addEventListener('DOMContentLoaded', loadHeader);
+document.addEventListener('DOMContentLoaded', () => {
+    loadHeader();
 
-async function submitForm() {
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    const contactForm = document.getElementById('contact-form');
     const formMessage = document.getElementById('form-message');
 
-    if (!name || !email || !message) {
-        formMessage.textContent = 'Please fill in all fields.';
-        return;
-    }
+    contactForm.addEventListener('submit', async (e) => { // Line ~40
+        e.preventDefault();
 
-    try {
-        const response = await fetch('http://localhost:3000/api/contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ name, email, message }),
-        });
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
 
-        if (response.ok) {
-            formMessage.textContent = 'Message sent successfully!';
-            document.getElementById('name').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('message').value = '';
-        } else {
-            formMessage.textContent = 'Error sending message.';
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email, message })
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error || 'Failed to submit contact form'); // Line 48
+            }
+
+            formMessage.innerHTML = '<p style="color: green;">Message sent successfully!</p>';
+            contactForm.reset();
+        } catch (error) {
+            console.error('Error submitting contact form:', error); // Line 54
+            formMessage.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
         }
-    } catch (error) {
-        formMessage.textContent = 'Error connecting to server.';
-        console.error(error);
-    }
-}
+    });
+});

@@ -6,6 +6,14 @@ async function loadHeader() {
         }
         const headerContent = await response.text();
         document.getElementById('header-placeholder').innerHTML = headerContent;
+
+        // Set active tab
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === 'courses.html') {
+                link.classList.add('active');
+            }
+        });
     } catch (error) {
         console.error('Error loading header:', error);
         document.getElementById('header-placeholder').innerHTML = '<p>Error loading header</p>';

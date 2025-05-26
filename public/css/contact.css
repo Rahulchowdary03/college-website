@@ -4,13 +4,62 @@ body {
     padding: 0;
 }
 
-.btn {
-    display: inline-block;
+#contact {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+#contact h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+button {
     padding: 10px 20px;
     background-color: #004080;
     color: white;
-    text-decoration: none;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#form-message {
+    margin-top: 20px;
+    font-size: 16px;
 }
 
 footer {
@@ -22,36 +71,20 @@ footer {
     width: 100%;
 }
 
-.contact {
-    padding: 40px;
-    text-align: center;
-}
-
-#form-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-#form-container input, #form-container textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#form-container button {
-    padding: 10px;
-    background-color: #004080;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 @media (max-width: 600px) {
-    .contact {
-        padding: 20px;
+    #contact {
+        padding: 30px 15px;
+    }
+
+    #contact h1 {
+        font-size: 28px;
+    }
+
+    form {
+        padding: 0 10px;
+    }
+
+    input, textarea, button {
+        font-size: 14px;
     }
 }
