@@ -6,27 +6,27 @@ body {
 
 #courses {
     text-align: center;
-    padding: 50px 20px;
+    padding: 3rem 1rem;
     background-color: #f4f4f4;
 }
 
 #courses h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
     color: #004080;
 }
 
 #courses ul {
     list-style: none;
     padding: 0;
-    max-width: 800px;
+    max-width: 50rem;
     margin: 0 auto;
 }
 
 #courses li {
-    font-size: 18px;
-    margin: 15px 0;
-    padding: 15px;
+    font-size: 1.125rem;
+    margin: 0.9375rem 0;
+    padding: 0.9375rem;
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -35,23 +35,46 @@ body {
 footer {
     background-color: #f4f4f4;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
+    padding: 0.625rem;
     width: 100%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     #courses {
-        padding: 30px 15px;
+        padding: 2rem 0.75rem;
     }
 
     #courses h1 {
-        font-size: 28px;
+        font-size: 1.75rem;
+    }
+
+    #courses ul {
+        max-width: 90%;
     }
 
     #courses li {
-        font-size: 16px;
-        padding: 10px;
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #courses {
+        padding: 1.5rem 0.5rem;
+    }
+
+    #courses h1 {
+        font-size: 1.5rem;
+    }
+
+    #courses li {
+        font-size: 0.875rem;
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+    }
+
+    footer {
+        padding: 0.5rem;
+        font-size: 0.85rem;
     }
 }

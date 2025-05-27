@@ -6,51 +6,53 @@ body {
 
 #contact {
     text-align: center;
-    padding: 50px 20px;
+    padding: 3rem 1rem;
     background-color: #f4f4f4;
 }
 
 #contact h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
     color: #004080;
 }
 
 form {
-    max-width: 500px;
+    max-width: 31.25rem;
     margin: 0 auto;
     text-align: left;
+    padding: 0 1rem;
 }
 
 label {
     display: block;
-    font-size: 18px;
-    margin: 10px 0 5px;
+    font-size: 1.125rem;
+    margin: 0.625rem 0 0.3125rem;
 }
 
 input, textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 0.625rem;
+    margin-bottom: 0.9375rem;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 textarea {
-    height: 150px;
+    height: 9.375rem;
     resize: vertical;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     background-color: #004080;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
+    width: 100%;
 }
 
 button:hover {
@@ -58,33 +60,83 @@ button:hover {
 }
 
 #form-message {
-    margin-top: 20px;
-    font-size: 16px;
+    margin-top: 1.25rem;
+    font-size: 1rem;
+    text-align: center;
 }
 
 footer {
     background-color: #f4f4f4;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
+    padding: 0.625rem;
     width: 100%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     #contact {
-        padding: 30px 15px;
+        padding: 2rem 0.75rem;
     }
 
     #contact h1 {
-        font-size: 28px;
+        font-size: 1.75rem;
     }
 
     form {
-        padding: 0 10px;
+        max-width: 90%;
     }
 
-    input, textarea, button {
-        font-size: 14px;
+    label {
+        font-size: 1rem;
+    }
+
+    input, textarea {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    #form-message {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #contact {
+        padding: 1.5rem 0.5rem;
+    }
+
+    #contact h1 {
+        font-size: 1.5rem;
+    }
+
+    label {
+        font-size: 0.875rem;
+    }
+
+    input, textarea {
+        padding: 0.4rem;
+        font-size: 0.85rem;
+    }
+
+    textarea {
+        height: 7.5rem;
+    }
+
+    button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    #form-message {
+        font-size: 0.85rem;
+    }
+
+    footer {
+        padding: 0.5rem;
+        font-size: 0.85rem;
     }
 }

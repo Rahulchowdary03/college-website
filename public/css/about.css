@@ -4,44 +4,130 @@ body {
     padding: 0;
 }
 
-#about {
+#register {
     text-align: center;
-    padding: 50px 20px;
+    padding: 3rem 1rem;
     background-color: #f4f4f4;
 }
 
-#about h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+#register h1 {
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
     color: #004080;
 }
 
-#about p {
-    font-size: 18px;
-    margin: 0 auto 20px;
-    max-width: 800px;
-    line-height: 1.6;
+form {
+    max-width: 31.25rem;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 1rem;
+}
+
+label {
+    display: block;
+    font-size: 1.125rem;
+    margin: 0.625rem 0 0.3125rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.625rem;
+    margin-bottom: 0.9375rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.625rem 1.25rem;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#form-message {
+    margin-top: 1.25rem;
+    font-size: 1rem;
+    text-align: center;
 }
 
 footer {
     background-color: #f4f4f4;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
+    padding: 0.625rem;
     width: 100%;
 }
 
-@media (max-width: 600px) {
-    #about {
-        padding: 30px 15px;
+@media (max-width: 768px) {
+    #register {
+        padding: 2rem 0.75rem;
     }
 
-    #about h1 {
-        font-size: 28px;
+    #register h1 {
+        font-size: 1.75rem;
     }
 
-    #about p {
-        font-size: 16px;
+    form {
+        max-width: 90%;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    input, select {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    #form-message {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #register {
+        padding: 1.5rem 0.5rem;
+    }
+
+    #register h1 {
+        font-size: 1.5rem;
+    }
+
+    label {
+        font-size: 0.875rem;
+    }
+
+    input, select {
+        padding: 0.4rem;
+        font-size: 0.85rem;
+    }
+
+    button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    #form-message {
+        font-size: 0.85rem;
+    }
+
+    footer {
+        padding: 0.5rem;
+        font-size: 0.85rem;
     }
 }

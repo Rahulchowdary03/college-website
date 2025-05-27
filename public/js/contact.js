@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contact-form');
     const formMessage = document.getElementById('form-message');
 
-    contactForm.addEventListener('submit', async (e) => { // Line ~40
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const name = document.getElementById('name').value;
@@ -45,14 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const result = await response.json();
 
             if (!response.ok) {
-                throw new Error(result.error || 'Failed to submit contact form'); // Line 48
+                throw new Error(result.error || 'Failed to submit contact form');
             }
 
             formMessage.innerHTML = '<p style="color: green;">Message sent successfully!</p>';
             contactForm.reset();
         } catch (error) {
-            console.error('Error submitting contact form:', error); // Line 54
-            formMessage.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+            console.error('Error submitting contact form:', error);
+            formMessage.innerHTML = `<p style="color: red;">Unable to send message. Please try again later.</p>`;
         }
     });
 });
